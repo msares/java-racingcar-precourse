@@ -14,7 +14,10 @@ public class RacingCarController {
     }
 
     private void playRace(Cars cars) {
-        Integer count = getInputCount();
+        Integer count = null;
+        while (count == null) {
+            count = getInputCount();
+        }
         OutputProvider.printResultTitle();
         for (int i = 0; i < count; i++) {
             cars.moveCars();
@@ -30,9 +33,15 @@ public class RacingCarController {
     }
 
     private Integer getInputCount() {
-        String inputCount = InputProvider.inputPlayingCount();
-        PlayingCount playingCount = new PlayingCount(inputCount);
-        return playingCount.getCount();
+        Integer count = null;
+        try {
+            String inputCount = InputProvider.inputPlayingCount();
+            PlayingCount playingCount = new PlayingCount(inputCount);
+            count = playingCount.getCount();
+        } catch (IllegalArgumentException e) {
+            OutputProvider.printExceptionMessage(e);
+        }
+        return count;
     }
 
     private Cars getCars() {

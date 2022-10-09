@@ -33,4 +33,8 @@ public class PlayingCount {
     private boolean isEmpty(String inputCount) {
         return inputCount == null || inputCount.trim().length() == 0;
     }
+
+    public Integer getCount() {
+        return this.count;
+    }
 }

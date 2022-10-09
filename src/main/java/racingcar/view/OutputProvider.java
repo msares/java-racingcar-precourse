@@ -3,6 +3,7 @@ package racingcar.view;
 import racingcar.common.GameMessage;
 import racingcar.domain.Car;
 import racingcar.domain.Cars;
+import racingcar.domain.WinnerCars;
 
 public class OutputProvider {
     public static void printResultTitle() {
@@ -15,7 +16,7 @@ public class OutputProvider {
             System.out.printf(GameMessage.RESULT_FORMAT, car.getCarName(), getMoveGraph(car.getMovementCount()));
         }
         System.out.printf(GameMessage.NEXT_LINE);
-   }
+    }
 
     private static String getMoveGraph(Integer movementCount) {
         StringBuilder moveGraph = new StringBuilder();
@@ -27,5 +28,9 @@ public class OutputProvider {
 
     public static void printExceptionMessage(IllegalArgumentException e) {
         System.out.println(e.getMessage());
+    }
+
+    public static void printFinalWinners(WinnerCars winnerCars) {
+        System.out.printf(GameMessage.FINAL_WINNER_FORMAT, winnerCars.getWinnerNames());
     }
 }

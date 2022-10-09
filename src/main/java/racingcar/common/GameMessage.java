@@ -7,4 +7,6 @@ public class GameMessage {
     public static final String RESULT_FORMAT = "%s : %s%n";
     public static final String HYPHEN = "-";
     public static final String NEXT_LINE = "\n";
+    public static final CharSequence WINNER_DELIMITER = ", ";
+    public static final String FINAL_WINNER_FORMAT = "최종 우승자: %s%n";
 }

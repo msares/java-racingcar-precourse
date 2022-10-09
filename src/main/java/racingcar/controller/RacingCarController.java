@@ -2,6 +2,8 @@ package racingcar.controller;
 
 import racingcar.domain.Cars;
 import racingcar.domain.PlayingCount;
+import racingcar.domain.Ranking;
+import racingcar.domain.WinnerCars;
 import racingcar.view.InputProvider;
 import racingcar.view.OutputProvider;
 
@@ -22,7 +24,9 @@ public class RacingCarController {
     }
 
     private void raceResult(Cars cars) {
-        //TODO:: 미구현
+        Ranking ranking = new Ranking(cars);
+        WinnerCars winnerCars = new WinnerCars(ranking);
+        OutputProvider.printFinalWinners(winnerCars);
     }
 
     private Integer getInputCount() {

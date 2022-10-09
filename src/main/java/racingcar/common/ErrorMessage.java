@@ -8,6 +8,7 @@ public class ErrorMessage {
     public static final String ERROR_PLAYING_COUNT_EMPTY = formatErrorMessage("이동 횟수는 빈 값일 수 없습니다.");
     public static final String ERROR_PLAYING_COUNT_RANGE = formatErrorMessage("이동 횟수는 양수만 입력 가능합니다.");
     public static final String ERROR_PLAYING_COUNT_MAX = formatErrorMessage("이동 횟수의 최댓값은 2147483647 입니다.");
+    public static final String ERROR_NOT_CARS = formatErrorMessage("자동차가 생성되지 않았습니다.");
 
     private static String formatErrorMessage(String message) {
         return String.format("%s %s", ERROR_PREFIX, message);

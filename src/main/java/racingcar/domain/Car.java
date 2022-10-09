@@ -2,8 +2,8 @@ package racingcar.domain;
 
 public class Car {
 
-    private CarName carName;
-    private MovementCount movementCount;
+    private final CarName carName;
+    private final MovementCount movementCount;
 
     public Car(String name) {
         this.carName = new CarName(name);

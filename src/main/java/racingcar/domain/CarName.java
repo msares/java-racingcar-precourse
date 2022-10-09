@@ -1,5 +1,7 @@
 package racingcar.domain;
 
+import racingcar.common.ErrorMessage;
+
 public class CarName {
 
     private final String name;
@@ -18,6 +20,7 @@ public class CarName {
             throw new IllegalArgumentException(ErrorMessage.ERROR_CAR_NAME_OVER_SIZE);
         }
     }
+
     private boolean isEmpty(String name) {
         return name == null || name.trim().length() == 0;
     }

@@ -28,4 +28,8 @@ public class CarName {
     private boolean checkMaxSize(String name) {
         return name.length() > MAX_SIZE;
     }
+
+    public String getName() {
+        return this.name;
+    }
 }
